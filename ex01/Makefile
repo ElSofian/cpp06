@@ -1,7 +1,7 @@
 # **************************************************************************** #
 # VARIABLES
 
-NAME		= convert
+NAME		= serializer
 CNAME		= $(shell echo $(NAME) | sed 's/.*/\u&/')
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -I -std=c++98 -g3
@@ -9,7 +9,7 @@ RM			= rm -rf
 
 OBJS_DIR	= bin
  
-SRCS		= ScalarConverter.cpp main.cpp
+SRCS		= Serializer.cpp main.cpp
 OBJS		= $(patsubst %.cpp, $(OBJS_DIR)/%.o, $(SRCS))
 
 # **************************************************************************** #

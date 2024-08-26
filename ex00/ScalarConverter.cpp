@@ -1,5 +1,4 @@
 # include "ScalarConverter.hpp"
-# include <cstdlib>
 
 ScalarConverter::ScalarConverter() {}
 
@@ -8,7 +7,7 @@ ScalarConverter::ScalarConverter(const ScalarConverter &copy): _value(copy._valu
 ScalarConverter::~ScalarConverter() {}
 
 ScalarConverter &ScalarConverter::operator=(const ScalarConverter &src) {
-	(void)src;
+    (void)src;
     return (*this);
 }
 
