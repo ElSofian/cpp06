@@ -19,32 +19,32 @@ void ScalarConverter::convert(std::string literal)
         if (std::isprint(charValue))
             std::cout << "char: " << charValue << std::endl;
         else
-            std::cout << "Cannot convert to char : the value is not printable." << std::endl;
+            std::cout << "char: Non displayable" << std::endl;
     } catch (const std::exception& e) {
-        std::cout << "Cannot convert to char : invalid input." << std::endl;
+        std::cout << "char: impossible" << std::endl;
     }
 
     // Int conversion
     try {
         int intValue = static_cast<int>(std::stoi(literal));
-        std::cout << "int : " << intValue << std::endl;
+        std::cout << "int: " << intValue << std::endl;
     } catch (const std::exception& e) {
-        std::cout << "Cannot convert to int : invalid input." << std::endl;
+        std::cout << "int: impossible" << std::endl;
     }
 
     // Float conversion
     try {
-        float floatValue = static_cast<float>(std::stof(literal));
-        std::cout << "float: " << floatValue << std::endl;
+        float floatValue = std::stof(literal);
+        std::cout << std::fixed << std::setprecision(1) << "float: " << floatValue << "f" << std::endl;
     } catch (const std::exception& e) {
-        std::cout << "Cannot convert to float : invalid input." << std::endl;
+        std::cout << "float: impossible" << std::endl;
     }
 
     // Double conversion
     try {
-        double doubleValue = static_cast<double>(std::stod(literal));
-        std::cout << "double: " << doubleValue << std::endl;
+        double doubleValue = std::stod(literal);
+        std::cout << std::fixed << std::setprecision(1) << "double: " << doubleValue << std::endl;
     } catch (const std::exception& e) {
-        std::cout << "Cannot convert to double : invalid input." << std::endl;
+        std::cout << "double: impossible" << std::endl;
     }
 }
