@@ -6,9 +6,9 @@
 class ScalarConverter {
 	private:
 		const std::string _value;
+		ScalarConverter();
 	
 	public:
-		ScalarConverter();
 		ScalarConverter(const ScalarConverter &copy);
 		~ScalarConverter();
 		ScalarConverter &operator=(const ScalarConverter &src);

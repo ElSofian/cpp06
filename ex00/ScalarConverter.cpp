@@ -34,7 +34,7 @@ void ScalarConverter::convert(std::string literal)
 
     // Float conversion
     try {
-        float floatValue = std::stof(literal);
+        float floatValue = static_cast<float>(std::stof(literal));
         std::cout << std::fixed << std::setprecision(1) << "float: " << floatValue << "f" << std::endl;
     } catch (const std::exception& e) {
         std::cout << "float: impossible" << std::endl;
@@ -42,7 +42,7 @@ void ScalarConverter::convert(std::string literal)
 
     // Double conversion
     try {
-        double doubleValue = std::stod(literal);
+        double doubleValue = static_cast<double>(std::stod(literal));
         std::cout << std::fixed << std::setprecision(1) << "double: " << doubleValue << std::endl;
     } catch (const std::exception& e) {
         std::cout << "double: impossible" << std::endl;
