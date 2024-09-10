@@ -52,7 +52,7 @@ void identify(Base &p)
             }
             catch (const std::exception& e)
             {
-              std::cout << "(couldn't dynamic cast)" << std::endl;
+                std::cout << "(couldn't dynamic cast)" << std::endl;
             }
         }
     }
