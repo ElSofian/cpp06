@@ -15,15 +15,12 @@ int main()
 
     Data *res_ptr = Serializer::deserialize(res);
 
-    std::cout << "Address after deserialization : " << Serializer::deserialize(res) << std::endl;
+    std::cout << "Address after deserialization : " << res_ptr << std::endl;
     std::cout << "Address after deserialization : " << &ptr << std::endl;
     
     std::cout << res_ptr->s1 << std::endl;
     std::cout << ptr.s1 << std::endl;
+    std::cout << res_ptr->s2 << std::endl;
     
-    {
-        Data *serialization_is_op = Serializer::deserialize(res);
-        std::cout << serialization_is_op->s2 << std::endl;
-    }
     return 0;
 }

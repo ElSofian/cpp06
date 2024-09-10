@@ -5,7 +5,7 @@ struct Data {
 	int n;
 	std::string s1;
 	std::string s2;
-} ;
+};
 
 class Serializer
 {
