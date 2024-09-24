@@ -26,11 +26,6 @@ Base* generate(void)
 
 void identify(Base &p)
 {
-    if (&p == nullptr)
-    {
-        std::cout << "(nullref)" << std::endl;
-        return ;
-    }
     try
     {
         (void)dynamic_cast<A&>(p);
